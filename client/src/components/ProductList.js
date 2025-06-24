@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useCart } from './CartContext';
+import './ProductCard.css'; // Assuming you have a CSS file for styling
 
 const fallbackProducts = [
   {
     _id: 1,
     name: "Awesome Gadget",
-    imageUrl: '/assets/Prodcat.jpg',
+    imageUrl: '/assets/Rubik.jpg',
     description: "The latest and greatest gadget.",
     price: 249.99,
     stock: 10,
@@ -46,11 +47,11 @@ const ProductList = () => {
 
     // Helper to resolve image path
     const resolveImageUrl = (url) => {
-        if (!url || typeof url !== 'string') return 'http://localhost:5000/assets/Prodcat.jpg';
+        if (!url || typeof url !== 'string') return 'http://localhost:5000/assets/Rubik.jpg';
         if (url.startsWith('http')) return url;
         if (url.startsWith('/assets/')) return 'http://localhost:5000' + url;
         // fallback for any other case
-        return 'http://localhost:5000/assets/Prodcat.jpg';
+        return 'http://localhost:5000/assets/Rubik.jpg';
     };
 
     

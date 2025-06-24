@@ -1,0 +1,185 @@
+/* Cart Container */
+.cart-container {
+  background: rgba(20, 20, 20, 0.98);
+  border: 2px solid #39ff14;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+  padding: 2rem;
+  margin: 4rem auto 2rem auto;
+  width: 90vw;
+  max-width: 600px;
+  transform: scale(1.02);
+}
+
+/* Cart Table */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.cart-table th,
+.cart-table td {
+  border-bottom: 1px solid #39ff14;
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.cart-table th {
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14;
+}
+
+.cart-table td {
+  color: #39ff14;
+}
+
+/* Quantity Input */
+.cart-table input[type="number"] {
+  background: #0a0a0a;
+  color: #39ff14;
+  border: 1px solid #39ff14;
+  border-radius: 6px;
+  padding: 0.3rem 0.4rem;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+/* Remove browser spinner */
+.cart-table input[type="number"]::-webkit-inner-spin-button,
+.cart-table input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  display: none;
+}
+
+.cart-table input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Remove Cart Button */
+.remove-cart-item {
+  background: none;
+  color: #ff39a6;
+  border: 1px solid #ff39a6;
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px #ff39a6;
+  transition: background 0.2s, color 0.2s;
+}
+
+.remove-cart-item:hover {
+  background: #ff39a6;
+  color: #0a0a0a;
+}
+
+/* Total */
+.cart-total {
+  font-size: 1.3rem;
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14;
+  margin-bottom: 1rem;
+}
+
+/* Checkout Button */
+.checkout-button {
+  background: #0a0a0a;
+  color: #39ff14;
+  border: 2px solid #39ff14;
+  border-radius: 8px;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 12px #39ff14;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.checkout-button:hover {
+  background: #39ff14;
+  color: #0a0a0a;
+  box-shadow: 0 0 32px #39ff14, 0 0 8px #fff;
+}
+
+/* Checkout Status */
+.checkout-status {
+  margin-top: 1rem;
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14;
+}
+
+/* Empty Cart Message */
+.cart-empty {
+  color: #fff;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 8px #39ff14;
+}
+
+/* Quantity Arrows Layout */
+.custom-quantity,
+.custom-quantity-vertical {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Quantity Input in Arrows */
+.custom-quantity input[type="number"],
+.custom-quantity-vertical input[type="number"] {
+  width: 2.5rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 1rem;
+  background: #0a0a0a;
+  color: #39ff14;
+  
+  
+  outline: none;
+  text-align: center;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.custom-quantity-vertical input[type="number"] {
+  width: 2.2rem;
+  padding: 0.1rem 0.2rem;
+}
+
+/* Vertical Arrow Buttons */
+.vertical-arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.neon-arrow,
+.neon-arrow-vertical {
+  background: transparent;
+  color: #39ff14;
+  border: 1px solid #39ff14;
+  border-radius: 4px;
+  
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  line-height: 1;
+  padding: 0;
+}
+
+.neon-arrow {
+  font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.neon-arrow-vertical {
+  font-size: 0.9rem;
+  width: 1.1rem;
+  height: 1rem;
+}
+
+.neon-arrow:hover,
+.neon-arrow-vertical:hover {
+  box-shadow: 0 0 16px #39ff14, 0 0 8px #fff;
+}

@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
         products = products.map(product => {
             let url = product.imageUrl;
             if (!url || typeof url !== 'string' || (!url.startsWith('/assets/') && !url.startsWith('http'))) {
-                url = '/assets/Prodcat.jpg';
+                url = '/assets/rubik.jpg';
             }
             return { ...product.toObject(), imageUrl: url };
         });

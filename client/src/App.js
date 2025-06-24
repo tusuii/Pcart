@@ -13,7 +13,7 @@ function App() {
  const stars = [...Array(numberOfStars)].map((_, i) => {
  const x = Math.random() * 100 + 'vw';
  const y = Math.random() * 100 + 'vh';
- const size = Math.random() * 5 + 'px';
+ const size = Math.random() * 6 + 'px';
  const animationDelay = Math.random() * 2 + 's';
 
 

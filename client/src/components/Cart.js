@@ -1,11 +1,19 @@
+// src\components\Cart.js
+
 import React, { useState } from 'react';
 import { useCart } from './CartContext';
 import axios from 'axios';
+import './Cart.css'; // Assuming you have a CSS file for styling
 
 const Cart = () => {
-  const { cart, dispatch } = useCart();
+  const { cart, dispatch } = useCart(); // 'dispatch' is used in handleRemove, handleQuantityChange, and implicitly in handleCheckout now
+
   const [checkoutStatus, setCheckoutStatus] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Calculate total *here*, within the component's scope,
+  // so it's accessible by handleCheckout and the JSX.
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const handleRemove = (id) => {
     dispatch({ type: 'REMOVE_FROM_CART', id });
@@ -16,21 +24,31 @@ const Cart = () => {
     dispatch({ type: 'UPDATE_QUANTITY', id, quantity });
   };
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
   const handleCheckout = async () => {
     setLoading(true);
     setCheckoutStatus('');
     try {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        setCheckoutStatus('You need to be logged in to place an order.');
+        setLoading(false);
+        return;
+      }
+
       const order = {
         products: cart.map(item => ({ product: item._id, quantity: item.quantity })),
-        totalAmount: total,
-        // For now, user is not authenticated, so skip user field
+        totalAmount: total, // 'total' is now correctly in scope
       };
-      await axios.post('/api/orders', order);
-      dispatch({ type: 'CLEAR_CART' });
-      setCheckoutStatus('Order placed successfully!');
+
+      await axios.post('/api/orders', order, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      setCheckoutStatus('Your order has been placed successfully!');
     } catch (err) {
+      console.error("Checkout error:", err.response ? err.response.data : err.message);
       setCheckoutStatus('Failed to place order. Please try again.');
     }
     setLoading(false);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Auth.css'; // Assuming you have a CSS file for styling
 
 const Login = ({ onLogin }) => {
   const [isLogin, setIsLogin] = useState(() => {
