@@ -125,7 +125,6 @@
   align-self: center;
   position: static;
   z-index: 10;
-
   font-size: 1rem;
   font-weight: bold;
   background: #39ff14 !important;
@@ -167,11 +166,20 @@
     width: clamp(320px, 95vw, 700px);
     padding: 1.2rem;
     gap: 1rem;
-    margin: 3rem auto 4rem auto;
+    margin: 1rem auto 4rem auto;
     height: calc(100vh - 180px);
     border-radius: 32px;
     flex-direction: column;
+    border: none;
+    box-shadow:none;
   }
+
+  .product-card:hover {
+      transform: scale(1.02);
+      border:none;
+      box-shadow:none;
+      transition: 1s;
+      }
 
   .product-image {
     width: 90%;
@@ -181,7 +189,11 @@
     margin: 2rem auto 1rem auto;
     box-shadow: 0 0 12px #39ff14;
     align-self: center;
-    ;
+  }
+  
+  .add-to-cart-button {
+  	align-self: center;
+  	text-align: center;
   }
 }
 
