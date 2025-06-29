@@ -2,18 +2,19 @@
   background: rgba(20, 20, 20, 0.95);
   border: 2px solid #39ff14;
   border-radius: 20px;
-  box-shadow: 0 0 24px #39ff14;
-  padding: 3rem;
+  box-shadow: 0 0 14px #39ff14;
+  padding: 1.5rem;
   max-width: 400px;
-  margin: 3rem auto;
-  width: 150%;
-  margin-left: -11%;
+  margin: 5.5rem auto;
+  width: 95%;
+  height:80%;
 }
 
 .auth-container h2 {
   color: #39ff14;
   text-align: center;
   margin-bottom: 1rem;
+  margin-top: 2px;
   text-shadow: 0 0 8px #39ff14;
 }
 
@@ -32,7 +33,7 @@
   font-size: 1rem;
   outline: none;
   transition: all 0.3s ease;
-}
+  }
 
 .auth-container input::placeholder {
   color: rgba(57, 255, 20, 0.5);
@@ -44,17 +45,19 @@
 }
 
 .auth-container button {
+  width: 6rem;
   background: #39ff14;
   color: #0a0a0a;
   border: none;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 1rem;
   box-shadow: 0 0 12px #39ff14;
+  align-self: center;
 }
 
 .auth-container button:hover {
@@ -82,7 +85,8 @@
 .auth-toggle {
   color: #39ff14;
   text-align: center;
-  margin-top: 1.5rem;
+  font-size: 15px;
+  margin-top: 3rem;
   cursor: pointer;
   text-decoration: underline;
   transition: color 0.3s;
