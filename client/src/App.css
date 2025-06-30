@@ -38,11 +38,11 @@
   text-shadow: 0 0 16px #39ff14;
 }
 
-/* for mobile devices */
-
-@media(min-width: 767px) {
-  .main-nav {
-    
-  }
-
+@media(max-width:786px){
+.main-nav{
+justify-content:center;
+align-self:center;
+font-size: 0.8rem;
+gap:1rem;
+}
 }

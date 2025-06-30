@@ -114,8 +114,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .auth-container {
-    width: auto;
-    margin: 50% auto;
+    width: 90%;
+    margin: 30% auto;
     padding: 2rem;
   }
 
