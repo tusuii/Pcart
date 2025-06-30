@@ -5,9 +5,10 @@
   box-shadow: 0 0 14px #39ff14;
   padding: 1.5rem;
   max-width: 400px;
-  margin: 5.5rem auto;
-  width: 95%;
-  height:80%;
+  margin-top: 3.7rem;
+  margin-right: 9rem;
+  width: 200%;
+  height:90%;
 }
 
 .auth-container h2 {
@@ -33,6 +34,8 @@
   font-size: 1rem;
   outline: none;
   transition: all 0.3s ease;
+  width: 80%;
+  align-self: center;
   }
 
 .auth-container input::placeholder {
@@ -106,4 +109,23 @@
   box-shadow: 0 0 0px 1000px #0a0a0a inset;
   transition: background-color 5000s ease-in-out 0s;
   caret-color: #39ff14;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
+    width: auto;
+    margin: 50% auto;
+    padding: 2rem;
+  }
+
+  .auth-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-container input,
+  .auth-container button {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
