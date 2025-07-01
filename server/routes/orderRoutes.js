@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
 const Order = require('../models/orderModel');
-const { protect } = require('../middleware/protect');
+const { protect } = require('../middleware/authMiddleware');
 
 router.post('/', protect, async (req, res) => {
   try {

@@ -25,8 +25,8 @@ router.get('/', async (req, res) => {
     }
 });
 
-// @desc    Get product by ID
-// @route  GET /api/products/:id
+// @desc    Get product by ID
+// @route  GET /:id
 // @access Public
 router.get('/:id', async (req, res) => {
     try {
@@ -42,8 +42,8 @@ router.get('/:id', async (req, res) => {
 });
 
 
-// @desc    Create a product
-// @route  POST /api/products
+// @desc    Create a product
+// @route  POST /
 // @access Private (or Public, depending on your app design)
 router.post('/', async (req, res) => {
     try {
@@ -70,9 +70,9 @@ router.post('/', async (req, res) => {
     }
 });
 
-// @desc    Update a product by ID
-// @route  PUT /api/products/:id
-// @access Private (e.g., admin only)
+// @desc    Update a product
+// @route  PUT /:id
+// @access Private/Admin
 router.put('/:id', async (req, res) => {
     try {
         const { name, description, price, imageUrl, stock } = req.body;
